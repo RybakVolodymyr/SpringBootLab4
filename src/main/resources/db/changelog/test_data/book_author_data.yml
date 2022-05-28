@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - changeSet:
+      id: add_books_data
+      author: Volodymyr
+      changes:
+        - sql:
+            endDelimiter: \nGO
+            splitStatements: true
+            sql: insert into book_author (book_id, author_id) 
+                 values ('308e247e-a530-4d4e-b7a6-a7ae733c2158', '88b09c93-8123-410d-b887-771e1b9b392b'),
+                        ('857a55eb-a00e-41a8-90c2-db5456368587', '1ecdbc23-e9d3-418b-8e18-05b51d7fbc1a'),
+                        ('17abbd2b-07c3-4df6-9ffa-109711950121', '52937233-c827-4fe6-908f-21a51fe773be'),
+                        ('17abbd2b-07c3-4df6-9ffa-109711950121', '45f49a3f-5f19-498e-9801-546043b2549e'),
+                        ('17abbd2b-07c3-4df6-9ffa-109711950121', '3f4a5d4c-0016-47f4-9854-143151f5214e'),
+                        ('d45b5ba9-787d-45bc-84dc-a4e8a0d29c65', '45f49a3f-5f19-498e-9801-546043b2549e'),
+                        ('d45b5ba9-787d-45bc-84dc-a4e8a0d29c65', '3f4a5d4c-0016-47f4-9854-143151f5214e'),
+                        ('6821d349-5315-4b8c-a8d9-b9fe19abb172', '3f4a5d4c-0016-47f4-9854-143151f5214e')

@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: add_books_data
+      author: Volodymyr
+      changes:
+        - sql:
+            endDelimiter: \nGO
+            splitStatements: true
+            sql: insert into authors (id, name) 
+                            values ('88b09c93-8123-410d-b887-771e1b9b392b', 'Leo Tolstoy'),
+                                   ('1ecdbc23-e9d3-418b-8e18-05b51d7fbc1a', 'James Joyce'),
+                                   ('52937233-c827-4fe6-908f-21a51fe773be', 'SomeAuthor1'),
+                                   ('45f49a3f-5f19-498e-9801-546043b2549e', 'SomeAuthor2'),
+                                   ('3f4a5d4c-0016-47f4-9854-143151f5214e', 'SomeAuthor3')

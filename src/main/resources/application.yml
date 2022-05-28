@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${DB_IP:localhost}:5433/test_db
+    username: ${DATASOURCE_USERNAME:postgres}
+    password: ${DATASOURCE_PASSWORD:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: ${JPA_HIBERNATE_DDL_AUTO:validate}
+    show-sql: true
+#    properties:
+#      hibernate:
+#        enable_lazy_load_no_trans: true
+  liquibase:
+    change-log: db/changelog/master.yml
+

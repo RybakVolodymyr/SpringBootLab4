@@ -1,0 +1,37 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_books_table
+      author: Volodymyr
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+              - column:
+                  name: name
+                  type: varchar
+              - column:
+                  name: description
+                  type: varchar
+              - column:
+                  name: publishing_house
+                  type: varchar
+              - column:
+                  name: price
+                  type: DOUBLE
+            schemaName: public
+            tableName: books
+        - addNotNullConstraint:
+            columnDataType: UUID
+            columnName: id
+            constraintName: books_id_not_null
+            schemaName: public
+            tableName: books
+            validate: true
+        - addPrimaryKey:
+            columnNames: id
+            constraintName: pk_books
+            schemaName: public
+            tableName: books
+            validate: true

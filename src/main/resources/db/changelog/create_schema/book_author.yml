@@ -1,0 +1,53 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_book_author_table
+      author: Volodymyr
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  name: book_id
+                  type: UUID
+              - column:
+                  name: author_id
+                  type: UUID
+            schemaName: public
+            tableName: book_author
+        - addNotNullConstraint:
+              columnDataType: UUID
+              columnName: author_id
+              constraintName: book_authors_author_id_not_null
+              schemaName: public
+              tableName: book_author
+              validate: true
+        - addNotNullConstraint:
+              columnDataType: UUID
+              columnName: book_id
+              constraintName: book_authors_book_id_not_null
+              schemaName: public
+              tableName: book_author
+              validate: true
+        - addPrimaryKey:
+            columnNames: book_id, author_id
+            constraintName: pk_book_author
+            schemaName: public
+            tableName: book_author
+            validate: true
+        - addForeignKeyConstraint:
+            baseColumnNames: book_id
+            baseTableName: book_author
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            constraintName: fk_book_author_books
+            referencedColumnNames: id
+            referencedTableName: books
+            validate:  true
+        - addForeignKeyConstraint:
+            baseColumnNames: author_id
+            baseTableName: book_author
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            constraintName: fk_book_author_authors
+            referencedColumnNames: id
+            referencedTableName: authors
+            validate:  true

@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_authors_table
+      author: Volodymyr
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+              - column:
+                  name: name
+                  type: varchar
+            schemaName: public
+            tableName: authors
+        - addNotNullConstraint:
+            columnDataType: UUID
+            columnName: id
+            constraintName: authors_id_not_null
+            schemaName: public
+            tableName: authors
+            validate: true
+        - addPrimaryKey:
+            columnNames: id
+            constraintName: pk_authors
+            schemaName: public
+            tableName: authors
+            validate: true

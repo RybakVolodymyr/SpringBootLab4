@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/create_schema/books.yml
+  - include:
+      file: db/changelog/create_schema/genres.yml
+  - include:
+      file: db/changelog/create_schema/authors.yml
+  - include:
+      file: db/changelog/create_schema/book_author.yml
+  - include:
+      file: db/changelog/create_schema/book_genre.yml
+  - include:
+      file: db/changelog/changes/add_columns_books.yml
+  - include:
+      file: db/changelog/test_data/books_data.yml
+  - include:
+      file: db/changelog/test_data/authors_data.yml
+  - include:
+      file: db/changelog/test_data/genres_data.yml
+  - include:
+      file: db/changelog/test_data/book_author_data.yml
+  - include:
+      file: db/changelog/test_data/book_genre_data.yml

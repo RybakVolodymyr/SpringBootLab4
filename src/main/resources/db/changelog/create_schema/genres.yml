@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_genres_table
+      author: Volodymyr
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+              - column:
+                  name: name
+                  type: varchar
+            schemaName: public
+            tableName: genres
+        - addNotNullConstraint:
+            columnDataType: UUID
+            columnName: id
+            constraintName: genres_id_not_null
+            schemaName: public
+            tableName: genres
+            validate: true
+        - addPrimaryKey:
+            columnNames: id
+            constraintName: pk_genres
+            schemaName: public
+            tableName: genres
+            validate: true

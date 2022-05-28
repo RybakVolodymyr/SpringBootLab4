@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: add_books_data
+      author: Volodymyr
+      changes:
+        - sql:
+            endDelimiter: \nGO
+            splitStatements: true
+            sql: insert into genres (id, name) 
+                            values ('1f666b4d-a935-456e-94b1-1e4bf675353e', 'Novel'),
+                                   ('6e0eef57-41ec-40d4-9fd7-21049366b2c8', 'Historical Fiction'),
+                                   ('26fc79f9-ebff-4939-ba13-0b6e0f8af502', 'SomeGenre1'),
+                                   ('a4693f7d-96e7-4d91-98f9-32f9f1fc5df1', 'SomeGenre2'),
+                                   ('0f241df2-b7ab-483e-875e-1b940bff9102', 'SomeGenre3')

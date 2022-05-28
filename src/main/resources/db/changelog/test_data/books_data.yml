@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: add_books_data
+      author: Volodymyr
+      changes:
+        - sql:
+            endDelimiter: \nGO
+            splitStatements: true
+            sql: insert into books (id, name, pages, price) 
+                            values ('308e247e-a530-4d4e-b7a6-a7ae733c2158', 
+                                    'War and Peace', 1255, 765),
+                                   ('857a55eb-a00e-41a8-90c2-db5456368587',
+                                   'Ulysses', 730, 356),
+                                   ('17abbd2b-07c3-4df6-9ffa-109711950121',
+                                   'SomeBook1', 524, 782),
+                                   ('d45b5ba9-787d-45bc-84dc-a4e8a0d29c65',
+                                   'SomeBook2', 123, 564),
+                                   ('6821d349-5315-4b8c-a8d9-b9fe19abb172',
+                                   'SomeBook3', 432, 747)

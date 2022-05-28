@@ -1,0 +1,6 @@
+spring:
+  liquibase:
+    change-log: classpath:db/changelog/master.yml
+  jpa:
+    hibernate:
+      ddl-auto: none

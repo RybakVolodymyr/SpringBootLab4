@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: add_books_data
+      author: Volodymyr
+      changes:
+        - sql:
+            endDelimiter: \nGO
+            splitStatements: true
+            sql: insert into book_genre (book_id, genre_id) 
+                 values ('308e247e-a530-4d4e-b7a6-a7ae733c2158', '1f666b4d-a935-456e-94b1-1e4bf675353e'),
+                        ('308e247e-a530-4d4e-b7a6-a7ae733c2158', '6e0eef57-41ec-40d4-9fd7-21049366b2c8'),
+                        ('857a55eb-a00e-41a8-90c2-db5456368587', '1f666b4d-a935-456e-94b1-1e4bf675353e'),
+                        ('17abbd2b-07c3-4df6-9ffa-109711950121', '26fc79f9-ebff-4939-ba13-0b6e0f8af502'),
+                        ('17abbd2b-07c3-4df6-9ffa-109711950121', 'a4693f7d-96e7-4d91-98f9-32f9f1fc5df1'),
+                        ('17abbd2b-07c3-4df6-9ffa-109711950121', '0f241df2-b7ab-483e-875e-1b940bff9102'),
+                        ('d45b5ba9-787d-45bc-84dc-a4e8a0d29c65', 'a4693f7d-96e7-4d91-98f9-32f9f1fc5df1'),
+                        ('d45b5ba9-787d-45bc-84dc-a4e8a0d29c65', '0f241df2-b7ab-483e-875e-1b940bff9102'),
+                        ('6821d349-5315-4b8c-a8d9-b9fe19abb172', '0f241df2-b7ab-483e-875e-1b940bff9102')

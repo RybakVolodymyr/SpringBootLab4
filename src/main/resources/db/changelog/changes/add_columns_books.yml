@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: add_column-books
+      author: Volodymyr
+      changes:
+        - addColumn:
+            tableName: books
+            columns:
+              - column:
+                  name: pages
+                  type: INT
+              - column:
+                  name: cover_type
+                  type: varchar

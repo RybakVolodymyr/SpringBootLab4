@@ -1,0 +1,53 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_book_genre_table
+      author: Volodymyr
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  name: book_id
+                  type: UUID
+              - column:
+                  name: genre_id
+                  type: UUID
+            schemaName: public
+            tableName: book_genre
+        - addNotNullConstraint:
+              columnDataType: UUID
+              columnName: book_id
+              constraintName: book_genre_book_id_not_null
+              schemaName: public
+              tableName: book_genre
+              validate: true
+        - addNotNullConstraint:
+              columnDataType: UUID
+              columnName: genre_id
+              constraintName: book_genre_genre_id_not_null
+              schemaName: public
+              tableName: book_genre
+              validate: true
+        - addPrimaryKey:
+            columnNames: book_id, genre_id
+            constraintName: pk_book_genre
+            schemaName: public
+            tableName: book_genre
+            validate: true
+        - addForeignKeyConstraint:
+            baseColumnNames: book_id
+            baseTableName: book_genre
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            constraintName: fk_book_genre_books
+            referencedColumnNames: id
+            referencedTableName: books
+            validate:  true
+        - addForeignKeyConstraint:
+            baseColumnNames: genre_id
+            baseTableName: book_genre
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            constraintName: fk_book_genre_genres
+            referencedColumnNames: id
+            referencedTableName: genres
+            validate:  true

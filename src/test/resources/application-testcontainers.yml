@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    url: jdbc:tc:postgresql:14:///testdb
+    username: admin
+    password: admin
+  jpa:
+    show-sql: true
