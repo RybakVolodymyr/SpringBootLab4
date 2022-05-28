@@ -1,8 +1,8 @@
-package com.rybak.spring.labs.lab4.check.data.dao;
+package com.rybak.spring.labs.lab4.jdbc.dao;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 
-public class GenreDao {
+public class AuthorDao {
 
     private JdbcTemplate jdbcTemplate;
 
@@ -11,6 +11,6 @@ public class GenreDao {
     }
 
     public int getCount() {
-        return jdbcTemplate.queryForObject("SELECT COUNT(*) FROM genres", Integer.class);
+        return jdbcTemplate.queryForObject("SELECT COUNT(*) FROM authors", Integer.class);
     }
 }

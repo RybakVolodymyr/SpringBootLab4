@@ -1,8 +1,8 @@
 package com.rybak.spring.labs.lab4.check.data;
 
-import com.rybak.spring.labs.lab4.check.data.dao.AuthorDao;
-import com.rybak.spring.labs.lab4.check.data.dao.BookDao;
-import com.rybak.spring.labs.lab4.check.data.dao.GenreDao;
+import com.rybak.spring.labs.lab4.jdbc.dao.AuthorDao;
+import com.rybak.spring.labs.lab4.jdbc.dao.BookDao;
+import com.rybak.spring.labs.lab4.jdbc.dao.GenreDao;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.jdbc.DataJdbcTest;
